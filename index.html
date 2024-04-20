@@ -4,29 +4,104 @@
     <meta charset="UTF-8">
     <title>Happy Birthday Appa</title>
     <style>
-        /* Set a background color and some default styling */
+        /* General styling for the page */
         body {
             background-color: lightblue;
-            color: black;
             font-family: 'Comic Sans MS', sans-serif;
+            overflow: hidden; /* Avoid scrollbars */
             text-align: center;
-            padding: 20px;
         }
 
-        /* Styling for the Happy Birthday text animation */
-        .transition-text {
-            font-size: 3em;
-            animation: fadeInOut 5s infinite;
+        /* "Happy Birthday" title */
+        h1 {
+            color: white;
+            font-size: 4em;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
         }
 
-        /* Animation for fading in and out */
-        @keyframes fadeInOut {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
+        /* Balloon animation from bottom to top */
+        @keyframes flyUp {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
         }
 
-        /* Button styling */
+        /* Styling for the balloons with different colors and random start points */
+        .balloon {
+            position: absolute;
+            bottom: -50px; /* Start below the viewport */
+            width: 50px;
+            height: 70px;
+            border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+            animation: flyUp 10s linear infinite;
+        }
+
+        /* Colors for different balloons */
+        .red { background: radial-gradient(circle, white 10%, red 50%, red 100%); }
+        .blue { background: radial-gradient(circle, white 10%, blue 50%, blue 100%); }
+        .green { background: radial-gradient(circle, white 10%, green 50%, green 100%); }
+        .yellow { background: radial-gradient(circle, white 10%, yellow 50%, yellow 100%); }
+        .orange { background: radial-gradient(circle, white 10%, orange 50%, orange 100%); }
+        .purple { background: radial-gradient(circle, white 10%, purple 50%, purple 100%); }
+
+        /* Custom delays and positions for multiple balloons to create a random effect */
+        .balloon1 {
+            left: 10%;
+            animation-delay: 1s;
+        }
+
+        .balloon2 {
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .balloon3 {
+            left: 50%;
+            animation-delay: 3s;
+        }
+
+        .balloon4 {
+            left: 70%;
+            animation-delay: 4s;
+        }
+
+        .balloon5 {
+            left: 90%;
+            animation-delay: 5s;
+        }
+
+        .balloon6 {
+            left: 20%;
+            animation-delay: 6s;
+        }
+
+        .balloon7 {
+            left: 40%;
+            animation-delay: 7s;
+        }
+
+        .balloon8 {
+            left: 60%;
+            animation-delay: 8s;
+        }
+
+        .balloon9 {
+            left: 80%;
+            animation-delay: 9s;
+        }
+
+        .balloon10 {
+            left: 50%;
+            animation-delay: 10s;
+        }
+
+        /* Button to navigate to another website */
         .navigate-button {
             background-color: orange;
             border: none;
@@ -41,31 +116,27 @@
             background-color: darkorange;
         }
 
-        /* Background text with wishes */
-        .background-text {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
-            opacity: 0.2;
-        }
     </style>
 </head>
 <body>
-    <div class="background-text">Happy Birthday Appa! May your day be filled with joy, love, and cake!</div>
-    <h1 class="transition-text">Happy Birthday!</h1>
-    
+    <h1>Happy Birthday Appa!</h1>
+
+    <!-- Multiple balloons with different colors -->
+    <div class="balloon red balloon1"></div>
+    <div class="balloon blue balloon2"></div>
+    <div class="balloon green balloon3"></div>
+    <div class="balloon yellow balloon4"></div>
+    <div class="balloon orange balloon5"></div>
+    <div class="balloon purple balloon6"></div>
+    <div class="balloon red balloon7"></div>
+    <div class="balloon blue balloon8"></div>
+    <div class="balloon green balloon9"></div>
+    <div class="balloon yellow balloon10"></div>
+
     <!-- Button to navigate to another website -->
-    <button class="navigate-button" onclick="window.location.href='https://nithishkumard.github.io/Advocate_Durai/';">Go to a Special Surprise</button>
-    
-    <!-- More wishes -->
-    <p>Wishing you a day filled with love, laughter, and all the things that make you happy.</p>
-    <p>Happy Birthday, Appa! You are the best, and today is your day to shine!</p>
+    <button class="navigate-button" onclick="window.location.href='https://example.com';">Go to a Special Surprise</button>
+
+    <!-- Additional birthday wishes -->
+    <p>Wishing you a day filled with happiness, love, and joy. Happy Birthday Appa!</p>
 </body>
 </html>
